@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import TodoList from './components/js/TodoList';
+import Form from './components/js/Form';
+ 
+class App extends React.Component {
+    render() {
+        return (
+            <TodoList form={<Form/>}>
+                오늘 할 일 템플릿입니다
+            </TodoList>
+        );
+    }
 }
-
+ 
 export default App;
